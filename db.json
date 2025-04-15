@@ -1,0 +1,10 @@
+{
+    "clientes":[
+        {
+            "id":"1",
+            "nome":"Fulano",
+            "cpf":"1234456",
+            "dataCadastro":"01/01/2001"
+        }
+    ]
+}
