@@ -10,12 +10,20 @@ import { Cliente } from '../cliente';
 })
 export class ClientesFormComponent implements OnInit {
 
- constructor(){}
+  cliente: Cliente;
 
- cliente: Cliente = new Cliente();
+ constructor(){
+  this.cliente = new Cliente();
+
+ }
+
 
   ngOnInit(): void {
     throw new Error('Method not implemented.');
+  }
+
+  clicar(){
+    console.log(this.cliente)
   }
 
 }

@@ -10,18 +10,19 @@
       <div class="col-md-6">
         <div class="form-group">
           <label>ID:</label>
-          <input type="text" class="form-control" disabled="true">
+          <input type="text" class="form-control" name="id"
+          [ngModel]="cliente.id" disabled="true">
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="form-group">
           <label>DATA CADASTRO:</label>
-          <input type="text" class="form-control" disabled=" true">
+          <input type="text" class="form-control"  name="dataCadastro"
+          [ngModel]="cliente.dataCadastro" disabled=" true">
         </div>
       </div>
     </div>
-
 
 
 
@@ -30,14 +31,14 @@
       <div class="col-md-6">
         <div class="form-group">
           <label>NOME*:</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" [(ngModel)]="cliente.nome" name="nome">
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="form-group">
           <label>CPF*:</label>
-          <input type="text" class="form-control">
+          <input type="text" class="form-control" [(ngModel)]="cliente.cpf" name="cpf">
         </div>
       </div>
 
@@ -45,7 +46,7 @@
 
     <div class="row">
       <div class="col-md-3">
-        <button type="submit" class="btn btn-success">
+        <button type="submit" class="btn btn-success" (click)="clicar()">
           <i class="fa fa-save"></i> SALVAR
         </button>
       </div>
