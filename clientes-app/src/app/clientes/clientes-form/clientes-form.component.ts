@@ -22,8 +22,8 @@ export class ClientesFormComponent implements OnInit {
     throw new Error('Method not implemented.');
   }
 
-  clicar(){
-    console.log(this.cliente)
+  onSubmit(){
+    console.log(this.cliente);
   }
 
 }
