@@ -11201,3 +11201,17 @@ body {
 .footer {
   padding: 5rem 0;
 }
+.espaco{
+  size: 5px;
+  padding: 5px;
+  margin: auto;
+  align-self: auto;
+}
+
+.tamanho{
+
+  padding: 5px;
+  margin: auto;
+  align-self: auto;
+  width: 20;
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Cliente } from '../../clientes/cliente';
 
 @Component({
   selector: 'app-home',
