@@ -4,55 +4,78 @@
 </ol>
 
 <div class="container">
-  <form #clienteForm="ngForm" (ngSubmit)="onSubmit()" >
-
+  <form #clienteForm="ngForm" (ngSubmit)="onSubmit()">
     <div class="row">
       <div class="col-md-12">
-        <div class="alert alert-success color" role="alert" *ngIf="success == true" >
+        <div
+          class="alert alert-success color"
+          role="alert"
+          *ngIf="success == true"
+        >
           Cliente salvo com sucesso!
         </div>
-        <div class="alert alert-danger color" role="alert" *ngFor="let erro of errors">
-          Erro ao salvar cliente!{{erro}}
+        <div
+          class="alert alert-danger color"
+          role="alert"
+          *ngFor="let erro of errors"
+        >
+          Erro ao salvar cliente!{{ erro }}
         </div>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row" *ngIf="cliente.id">
       <div class="col-md-6">
         <div class="form-group color">
           <label>ID:</label>
-          <input type="text" class="form-control" name="id"
-          [ngModel]="cliente.id" disabled="true">
+          <input
+            type="text"
+            class="form-control"
+            name="id"
+            [ngModel]="cliente.id"
+            disabled="true"
+          />
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="form-group color">
           <label>DATA CADASTRO:</label>
-          <input type="text" class="form-control"  name="dataCadastro"
-          [ngModel]="cliente.dataCadastro" disabled=" true">
+          <input
+            type="text"
+            class="form-control"
+            name="dataCadastro"
+            [ngModel]="cliente.dataCadastro"
+            disabled=" true"
+          />
         </div>
       </div>
     </div>
-
-
-
 
     <div class="row">
       <div class="col-md-6">
         <div class="form-group color">
           <label>NOME*:</label>
-          <input type="text" class="form-control" [(ngModel)]="cliente.nome" name="nome">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="cliente.nome"
+            name="nome"
+          />
         </div>
       </div>
 
       <div class="col-md-6">
         <div class="form-group color">
           <label>CPF*:</label>
-          <input type="text" class="form-control" [(ngModel)]="cliente.cpf" name="cpf">
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="cliente.cpf"
+            name="cpf"
+          />
         </div>
       </div>
-
     </div>
 
     <div class="row">
@@ -62,6 +85,5 @@
         </button>
       </div>
     </div>
-
   </form>
 </div>

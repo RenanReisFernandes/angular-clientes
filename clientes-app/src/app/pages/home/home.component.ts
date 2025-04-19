@@ -8,5 +8,6 @@ import { Cliente } from '../../clientes/cliente';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+cliente: any;
 
 }

@@ -28,6 +28,11 @@ export class ClientesFormComponent implements OnInit {
     this.service.salvar(this.cliente)
     .subscribe(resposta =>{
       this.success=true;
+      this.errors=[];
+      this.cliente=resposta;
+    }, error =>{
+      this.success=false;
+      this.errors=error.errors;
     })
   }
 
