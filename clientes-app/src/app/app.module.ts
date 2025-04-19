@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {TemplateModule} from './template/template.module';
 import { AboutComponent } from './pages/about/about.component';
 import { ClientesModule } from './clientes/clientes.module';
+import { ClientesService } from './clientes.service';
 
 
 @NgModule({
@@ -19,7 +20,9 @@ import { ClientesModule } from './clientes/clientes.module';
     TemplateModule,
     ClientesModule
   ],
-  providers: [],
+  providers: [
+    ClientesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
