@@ -1,0 +1,10 @@
+.main-black-bg {
+  background-color: black;
+  color: white; /* se quiser garantir que o texto fique visível */
+}
+.color{
+  color: white;
+}
+.spaceBtn{
+  margin: 15px;
+}

@@ -1,6 +1,6 @@
 <h1 class="mt-4">Clientes</h1>
 <ol class="breadcrumb mb-4">
-  <li class="breadcrumb-item active">Formulário de clientes</li>
+  <li class="breadcrumb-item active color">Formulário de clientes</li>
 </ol>
 
 <div class="container">
@@ -8,10 +8,10 @@
 
     <div class="row">
       <div class="col-md-12">
-        <div class="alert alert-success" role="alert" *ngIf="success == true">
+        <div class="alert alert-success color" role="alert" *ngIf="success == true" >
           Cliente salvo com sucesso!
         </div>
-        <div class="alert alert-danger" role="alert" *ngFor="let erro of errors">
+        <div class="alert alert-danger color" role="alert" *ngFor="let erro of errors">
           Erro ao salvar cliente!{{erro}}
         </div>
       </div>
@@ -19,7 +19,7 @@
 
     <div class="row">
       <div class="col-md-6">
-        <div class="form-group">
+        <div class="form-group color">
           <label>ID:</label>
           <input type="text" class="form-control" name="id"
           [ngModel]="cliente.id" disabled="true">
@@ -27,7 +27,7 @@
       </div>
 
       <div class="col-md-6">
-        <div class="form-group">
+        <div class="form-group color">
           <label>DATA CADASTRO:</label>
           <input type="text" class="form-control"  name="dataCadastro"
           [ngModel]="cliente.dataCadastro" disabled=" true">
@@ -40,14 +40,14 @@
 
     <div class="row">
       <div class="col-md-6">
-        <div class="form-group">
+        <div class="form-group color">
           <label>NOME*:</label>
           <input type="text" class="form-control" [(ngModel)]="cliente.nome" name="nome">
         </div>
       </div>
 
       <div class="col-md-6">
-        <div class="form-group">
+        <div class="form-group color">
           <label>CPF*:</label>
           <input type="text" class="form-control" [(ngModel)]="cliente.cpf" name="cpf">
         </div>
@@ -57,7 +57,7 @@
 
     <div class="row">
       <div class="col-md-3">
-        <button type="submit" class="btn btn-success">
+        <button type="submit" class="btn btn-success spaceBtn">
           <i class="fa fa-save"></i> SALVAR
         </button>
       </div>
