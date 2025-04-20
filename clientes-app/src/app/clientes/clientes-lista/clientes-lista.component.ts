@@ -27,4 +27,8 @@ export class ClientesListaComponent implements OnInit {
     this.router.navigate(['/clientes-form'])
   }
 
+  voltarHome(){
+    this.router.navigate(['/home'])
+  }
+
 }

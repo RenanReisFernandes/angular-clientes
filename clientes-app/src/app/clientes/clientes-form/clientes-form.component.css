@@ -6,5 +6,8 @@
   color: white;
 }
 .spaceBtn{
-  margin: 15px;
+  margin: 5px;
+}
+.ladoAlado{
+  display:inline-block;
 }
