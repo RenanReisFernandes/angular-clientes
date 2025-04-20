@@ -12,6 +12,7 @@ import{ClientesService} from'../../clientes.service'
 export class ClientesListaComponent implements OnInit {
 
   clientes : Cliente[] =[];
+  clienteselecionado: Cliente = new Cliente;
 
   constructor(private service: ClientesService, private router: Router){}
 
@@ -29,6 +30,10 @@ export class ClientesListaComponent implements OnInit {
 
   voltarHome(){
     this.router.navigate(['/home'])
+  }
+
+  preparaDelecao(cliente: Cliente){
+    this.clienteselecionado = cliente;
   }
 
 }
