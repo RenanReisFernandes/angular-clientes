@@ -1,1 +1,73 @@
-<p>clientes-lista works!</p>
+<ol class="breadcrumb mb-4">
+  <li class="breadcrumb-item active">Consulta</li>
+</ol>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <button class="btn btn-warning" (click)="cadastro()">
+        <i class="fa fa-plus"></i> NOVO
+      </button>
+    </div>
+
+    <div class="col-md-2">
+      <button class="btn btn-danger" (click)="voltarHome()">
+        <i class="fa fa-arrow-alt-circle-left"></i> VOLTAR
+      </button>
+    </div>
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-condensed table-hover cor">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Data de cadastro</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of clientes">
+            <td>{{ cliente.id }}</td>
+            <td>{{ cliente.nome }}</td>
+            <td>{{ cliente.cpf }}</td>
+            <td>{{ cliente.dataCadastro }}</td>
+            <td>
+              <button
+                class="btn btn-danger"
+                data-toggle="modal"
+                data-target="#modalDeleta"
+                (click)="cliente.id && delete(cliente.id)"
+              >
+                <i class="fa fa-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <div id="modalDeleta" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Confirma deleção?</h4>
+          </div>
+          <div class="modal-body" *ngIf="clienteselecionado">
+            Confirma deleção de {{ clienteselecionado.nome }}?
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success" (click)="confirmDelete()">Confirma</button>
+            <button class="btn btn-default" data-dismiss="modal">Cancela</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

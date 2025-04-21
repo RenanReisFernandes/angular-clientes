@@ -16,14 +16,21 @@ export class ClientesService {
   return this.http.post<Cliente>(' http://localhost:3000/clientes',cliente);
  }
 
-  getCliente() : Cliente {
-    let cliente : Cliente = new Cliente();
+ atualizar(cliente: Cliente) : Observable<any>{
 
-    cliente.id=0;
-    cliente.nome="Fulanito";
-    cliente.cpf="12121212";
-    cliente.dataCadastro="01/01/2111";
+  return this.http.put<Cliente>(`http://localhost:3000/clientes/${cliente.id}`,cliente);
+ }
 
-    return cliente;
+  getClientes(): Observable<Cliente[]>{
+    return this.http.get<Cliente[]>('http://localhost:3000/clientes')
   }
+
+  getClienteById(id:number) : Observable<Cliente>{
+    return this.http.get<any>(`http://localhost:3000/clientes/${id}`)
+  }
+
+  deleteClient(id: number) : Observable<Cliente>{
+    return this.http.delete<Cliente>(`http://localhost:3000/clientes/${id}`)
+  }
+
 }
