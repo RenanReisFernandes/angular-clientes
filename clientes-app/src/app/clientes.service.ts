@@ -29,4 +29,8 @@ export class ClientesService {
     return this.http.get<any>(`http://localhost:3000/clientes/${id}`)
   }
 
+  deleteClient(id: number) : Observable<Cliente>{
+    return this.http.delete<Cliente>(`http://localhost:3000/clientes/${id}`)
+  }
+
 }
